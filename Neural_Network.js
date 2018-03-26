@@ -2,11 +2,14 @@ var brain;
 
 function setup() {
   //brain = new NeuralNetwork(3, 3, 1);
-  let a = new Matrix(2, 3);
+  let a = new Matrix(2, 2);
   a.randomize();
-  let b = a.transpose();
-  console.table(a.matrix);
-  console.table(b.matrix);
+  a.print();
+  function doubleIt(x) {
+    return x * 2;
+  }
+  a.map(doubleIt);
+  a.print();
 }
 
 function draw() {
